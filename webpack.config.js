@@ -1,10 +1,10 @@
-var path = require('path');
+const path = require('path');
 
 module.exports = {
     entry: path.join(__dirname, 'src/bootstrap.tsx'),
     output: {
         filename: 'public/bundle.js',
-        path: __dirname
+        path: __dirname,
     },
     devtool: 'inline-source-map',
     module: {
@@ -14,9 +14,9 @@ module.exports = {
                 loader: 'ts-loader',
                 exclude: /node_modules/,
             },
-        ]
+        ],
     },
     resolve: {
-        extensions: [".tsx", ".ts", ".js"]
+        extensions: ['.tsx', '.ts', '.js'],
     },
 };
